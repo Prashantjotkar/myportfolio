@@ -41,7 +41,7 @@ export default function Navbar() {
           <ul className="navbar-nav">
             <li className="nav-item btn">
               <Link
-                className="nav-link fs-5 me-3 mt-1 text-black"
+                className="nav-link fs-5 me-3 mt-1 text-white"
                 to="/skills"
                 spy={true}
                 smooth={true}
