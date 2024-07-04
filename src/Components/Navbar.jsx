@@ -5,7 +5,10 @@ import { Link } from "react-scroll";
 export default function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-transparent" style={{ position: "relative" }}>
+      <nav
+        className="navbar navbar-expand-lg bg-transparent"
+        style={{ position: "relative" }}
+      >
         <Link
           to="/"
           className="navbar-brand  fs-2 ms-5 mt-3 text-white"
@@ -36,15 +39,16 @@ export default function Navbar() {
           id="navbarNav"
         >
           <ul className="navbar-nav">
-            <li className="nav-item">
+            <li className="nav-item btn">
               <Link
-                className="nav-link fs-5 me-3 mt-1 text-white"
+                className="nav-link fs-5 me-3 mt-1 text-black"
                 to="/skills"
                 spy={true}
                 smooth={true}
                 duration={500}
               >
-<p className="ll">Skills</p>              </Link>
+                <p className="ll">Skills</p>{" "}
+              </Link>
             </li>
             <li className="nav-item">
               <Link
@@ -65,7 +69,7 @@ export default function Navbar() {
                 className="nav-link fs-5 me-3 mt-1 text-white "
                 to="/projects"
               >
-               <p className="ll">Projects</p> 
+                <p className="ll">Projects</p>
               </Link>
             </li>
             <li className="nav-item">
@@ -76,7 +80,7 @@ export default function Navbar() {
                 smooth={true}
                 duration={500}
               >
-              <p className="ll">About Me</p>  
+                <p className="ll">About Me</p>
               </Link>
             </li>
           </ul>
