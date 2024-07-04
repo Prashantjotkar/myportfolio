@@ -1,0 +1,85 @@
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #3498db; /* Default circle color */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 4s linear infinite;
+  }
+  
+  .center {
+    width: 100px;
+    height: 100px;
+    background-color: #e74c3c; /* Larger circle color */
+  }
+  
+  .orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+  }
+  
+  .orbit-1 {
+    transform-origin: top;
+    animation: orbit 4s linear infinite;
+  }
+  
+  .orbit-2 {
+    transform-origin: top right;
+    animation: orbit 4s linear infinite reverse;
+  }
+  
+  .orbit-3 {
+    transform-origin: right;
+    animation: orbit 4s linear infinite;
+  }
+  
+  .orbit-4 {
+    transform-origin: bottom right;
+    animation: orbit 4s linear infinite reverse;
+  }
+  
+  .orbit-5 {
+    transform-origin: bottom;
+    animation: orbit 4s linear infinite;
+  }
+  
+  .orbit-6 {
+    transform-origin: bottom left;
+    animation: orbit 4s linear infinite reverse;
+  }
+  
+  .orbit-7 {
+    transform-origin: left;
+    animation: orbit 4s linear infinite;
+  }
+  
+  .orbit-8 {
+    transform-origin: top left;
+    animation: orbit 4s linear infinite reverse;
+  }
+  
+  @keyframes rotate {
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  @keyframes orbit {
+    to {
+      transform: translateX(100px) rotate(360deg);
+    }
+  }
+  

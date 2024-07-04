@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Portfolio of Prashant",
+  "name": "Portfolio of Prashant",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "IMG_20190530_213432.jpg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },

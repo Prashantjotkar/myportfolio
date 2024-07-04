@@ -2,37 +2,234 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.left-content {
+
+  margin-top: 25vh;
+
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.right-content {
+  padding: 20px;
+  margin-top: 20vh;
+  transition: transform 0.3s ease;
+}
+
+.right-content img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  margin-left: 10vh;
+}
+
+.right-content img:hover {
+  transform: scale(1.1);
+  /* Scale the image to 110% on hover */
+}
+
+/* Optional: Overlay text on hover */
+.image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
+  padding: 10px;
+  opacity: 0;
+  /* Initially hidden */
+  transition: opacity 0.9s ease;
+  /* Smooth fade-in/out */
+}
+
+.right-content:hover .image-overlay {
+  opacity: 1;
+  /* Show overlay on hover */
+}
+
+
+/* *****for social */
+
+/* Define styles for icons */
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #8624c7;
+  font-size: 24px;
+}
+
+/* Define styles for individual icons */
+.social-icons .icon-leetcode:before {
+  content: "\f12e";
+  /* Unicode for the icon, adjust as needed */
+}
+
+.social-icons .icon-linkedin:before {
+  content: "\f08c";
+  /* Unicode for the icon, adjust as needed */
+}
+
+.social-icons .icon-github:before {
+  content: "\f09b";
+  /* Unicode for the icon, adjust as needed */
+}
+
+
+/* ***************** for skills */
+
+
+#container {
+  --n: 7;
+  /* number of item */
+  --d: 15s;
+  /* durtion */
+
+  width: 300px;
+  height: 300px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 50px;
+  grid-template-rows: 50px;
+  place-content: center;
+  border-radius: 50%;
+  margin-top: 25vh;
+  position: relative;
+}
+
+.item {
+  grid-area: 1/1;
+  line-height: 50px;
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  animation: spin var(--d) linear infinite;
+  transform: rotate(0) translate(200px) rotate(0);
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(1turn) translate(200px) rotate(-1turn);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.item:nth-child(1) {
+  animation-delay: calc(-0*var(--d)/var(--n))
+}
+
+.item:nth-child(2) {
+  animation-delay: calc(-1*var(--d)/var(--n))
+}
+
+.item:nth-child(3) {
+  animation-delay: calc(-2*var(--d)/var(--n))
+}
+
+.item:nth-child(4) {
+  animation-delay: calc(-3*var(--d)/var(--n))
+}
+
+.item:nth-child(5) {
+  animation-delay: calc(-4*var(--d)/var(--n))
+}
+
+.item:nth-child(6) {
+  animation-delay: calc(-5*var(--d)/var(--n))
+}
+
+.item:nth-child(7) {
+  animation-delay: calc(-6*var(--d)/var(--n))
+}
+
+.item:nth-child(8) {
+  animation-delay: calc(-7*var(--d)/var(--n))
+}
+
+.item:nth-child(9) {
+  animation-delay: calc(-8*var(--d)/var(--n))
+}
+
+/*.item:nth-child(N) {animation-delay:calc(-(N - 1)*var(--d)/var(--n))}*/
+
+
+/*  for exp page */
+
+
+.divC {
+  border: 2px solid blue;
+  width: 100vh;
+  height: 20vh;
+  margin-left: 95vh;
+  margin-top: 15vh;
+  border-radius: 2vh;
+  
+}
+
+.ptext{
+
+  text-align: center;
+  color: rgb(57, 187, 96);
+  margin-top: 2px;
+  
+
+
+}
+
+.exp{
+  margin-left: 15vh;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* button clicks */
+
+/* ButtonWithAnimation.css */
+
+.custom-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 20px;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.custom-button:hover {
+  color: #f39c12; /* Change color on hover if needed */
+}
+
+/* Yellow underline animation */
+.underline-animation::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #f39c12; /* Yellow color */
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.underline-animation:hover::after,
+.underline-animation.active::after {
+  
+  transform: scaleX(1); /* Expand to full width on hover */
+}
+
+
+/* for about */
+
+.cont{
+  margin-top: -20vh;
+  margin-left: 30vh;
+  height:50vh
+}
+
+p.ll:hover {
+  color: #FFC300;
 }
