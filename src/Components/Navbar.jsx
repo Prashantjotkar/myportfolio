@@ -50,7 +50,7 @@ export default function Navbar() {
                 <p className="ll">Skills</p>{" "}
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item btn">
               <Link
                 className="nav-link fs-5 me-3 mt-1 text-white"
                 to="/experience"
@@ -61,7 +61,7 @@ export default function Navbar() {
                 <p className="ll">Experience</p>
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item btn">
               <Link
                 spy={true}
                 smooth={true}
@@ -72,7 +72,7 @@ export default function Navbar() {
                 <p className="ll">Projects</p>
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item btn">
               <Link
                 className="nav-link fs-5 me-3 mt-1 text-white"
                 to="/about"

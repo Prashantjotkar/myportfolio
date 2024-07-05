@@ -106,7 +106,7 @@ export default function About() {
               </p>
             </p>
             <p
-                style={{  marginTop:"-10vh",marginLeft: "35vh" }}
+                style={{  marginTop:"-10vh",marginLeft: "45vh" }}
                 onClick={handleScrollToTop}
               >
                 <img
